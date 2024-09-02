@@ -13,7 +13,6 @@ class Message {
     required this.timestamp,
   });
 
-  // Factory constructor to create an instance from a Firestore document
   factory Message.fromFirestore(DocumentSnapshot doc) {
     final data = doc.data() as Map<String, dynamic>;
     return Message(
@@ -24,7 +23,6 @@ class Message {
     );
   }
 
-  // Convert Message instance to a Map for Firestore
   Map<String, dynamic> toMap() {
     return {
       'senderId': senderId,

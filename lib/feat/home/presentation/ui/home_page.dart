@@ -15,17 +15,12 @@ class HomeScreen extends StatelessWidget {
       child: BlocBuilder<HomeBloc, HomeState>(
         buildWhen: (previous, current) => previous != current,
         builder: (context, state) => Scaffold(
-          appBar: AppBar(
-            title: Text('Hello, ${user.email}'),
-          ),
+          appBar: AppBar(title: Text('Hello, ${user.email}, your role is ${user.role}')),
           body: BlocProvider.of<HomeBloc>(context)
               .screens[BlocProvider.of<HomeBloc>(context).activeIndex],
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: BlocProvider.of<HomeBloc>(context).activeIndex,
-            onTap: (index) {
-              BlocProvider.of<HomeBloc>(context)
-                  .add(ChangePageEvent(activePageIndex: index));
-            },
+            onTap: (index) => BlocProvider.of<HomeBloc>(context).add(ChangePageEvent(activePageIndex: index)),
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(Icons.location_on),

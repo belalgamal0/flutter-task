@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:injectable/injectable.dart';
 import '../../../../core/failure/failure.dart';
@@ -37,7 +36,7 @@ class DestinationsRemoteDataSourceImpl implements DestinationsRemoteDataSource {
       {required String destinationName}) async {
     try {
       await firebaseFirestore.collection('destinations').add({
-        'name': 'destination no. ${Random().nextInt(1000)}',
+        'name': destinationName,
       });
     } catch (e) {
       throw ServerFailure('');
