@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "872799367936",
+    "project_id": "flutter-task-81166",
+    "storage_bucket": "flutter-task-81166.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872799367936:android:9b4706a37434f3fc5b79e5",
+        "android_client_info": {
+          "package_name": "com.bevatel.task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872799367936-73cecnss21spn0lsie0uj3g4c948ilr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkR70RAfNJcfgnrvJCw9nmkG5ibJpD4Qs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872799367936-73cecnss21spn0lsie0uj3g4c948ilr2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "872799367936-ld7nig5a6i3vuup75fthe3h44jd5npjp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bevatel.task"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

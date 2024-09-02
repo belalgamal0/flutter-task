@@ -1,0 +1,6 @@
+analyzer:
+  errors:
+    invalid_use_of_visible_for_testing_member: ignore
+    must_be_immutable: ignore
+    use_key_in_widget_constructors: ignore
+include: package:flutter_lints/flutter.yaml
