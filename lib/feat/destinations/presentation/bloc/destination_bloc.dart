@@ -40,19 +40,19 @@ class DestinationBloc extends Bloc<DestinationEvents, DestinationState> {
   }
 
   void _addDestination(AddDestinationEvent event, Emitter<DestinationState> emit) async {
-    emit(state.copyWith(status: DestinationStatus.loading)); // Emit loading state
+    emit(state.copyWith(status: DestinationStatus.loading)); 
 
     final result = await addDestination(destinationName: event.destinationName);
     _eitherLoadedOrErrorStateAdding(result, emit);
   }
   void _updateDestination(UpdateDestinationEvent event, Emitter<DestinationState> emit) async {
-    emit(state.copyWith(status: DestinationStatus.loading)); // Emit loading state
+    emit(state.copyWith(status: DestinationStatus.loading));
 
     final result = await updateDestination(destinationName: event.destinationName, destinationId: event.destinationId);
     _eitherLoadedOrErrorStateAdding(result, emit);
   }
     void _deleteDestination(DeleteDestinationEvent event, Emitter<DestinationState> emit) async {
-    emit(state.copyWith(status: DestinationStatus.loading)); // Emit loading state
+    emit(state.copyWith(status: DestinationStatus.loading));
 
     final result = await deleteDestination(destinationId: event.destinationId);
     _eitherLoadedOrErrorStateAdding(result, emit);

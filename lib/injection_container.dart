@@ -26,7 +26,6 @@ import 'firebase_options.dart';
 
 @module
 abstract class AppModule {
-  // Register blocs
   @injectable
   LoginBloc get loginBloc;
   @injectable
@@ -35,11 +34,10 @@ abstract class AppModule {
   DestinationBloc get destinationBloc;
   @injectable
   HomeBloc get homeBloc;
-    @injectable
+  @injectable
   UsersBloc get usersBloc;
-      @injectable
+  @injectable
   ChatBloc get chatBloc;
-  // Register use cases
   @lazySingleton
   LoginUseCase get loginUsecase;
   @lazySingleton
@@ -52,14 +50,12 @@ abstract class AppModule {
   UpdateDestination get updateDestination;
   @lazySingleton
   DeleteDestination get deleteDestination;
-    @lazySingleton
-
+  @lazySingleton
   GetAllUsers get getAllUsers;
   @lazySingleton
   LoadChat get loadChat;
-    @lazySingleton
+  @lazySingleton
   SendMessage get sendMessage;
-  // Register other dependencies
   @lazySingleton
   NetworkInfoImpl get networkInfo;
 }
@@ -81,18 +77,7 @@ abstract class RegisterModule {
   @injectable
   FirebaseFirestore get firestore => FirebaseFirestore.instance;
 }
-// @module
-// abstract class FirebaseModule {
-//   @preResolve
-//   Future<FirebaseApp> get initFirebaseApp =>
-//       Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
-//   @injectable
-//   FirebaseAuth get auth => FirebaseAuth.instance;
-
-//   @injectable
-//   FirebaseFirestore get firestore => FirebaseFirestore.instance;
-// }
 final getIT = GetIt.instance;
 
 @InjectableInit()
